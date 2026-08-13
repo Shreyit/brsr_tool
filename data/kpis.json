@@ -1,0 +1,402 @@
+[
+  {
+    "company": "AXIS",
+    "fy": "2023-2024",
+    "kpi": "ghg_intensity",
+    "value": 1.0,
+    "prior_year_value": 2.0,
+    "unit": "g CO2e/ Rupee"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2023-2024",
+    "kpi": "water_intensity",
+    "value": 9.0,
+    "prior_year_value": 0.000147,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2023-2024",
+    "kpi": "employee_turnover_rate",
+    "value": 28.8,
+    "prior_year_value": 34.8,
+    "unit": "%"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2023-2024",
+    "kpi": "gender_pay_gap",
+    "value": null,
+    "prior_year_value": null,
+    "unit": null
+  },
+  {
+    "company": "AXIS",
+    "fy": "2023-2024",
+    "kpi": "safety_incident_rate",
+    "value": null,
+    "prior_year_value": null,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2024-2025",
+    "kpi": "ghg_intensity",
+    "value": 1.0,
+    "prior_year_value": 2.0,
+    "unit": "g CO2e/ Rupee"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2024-2025",
+    "kpi": "water_intensity",
+    "value": 0.000124,
+    "prior_year_value": 0.000147,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2024-2025",
+    "kpi": "employee_turnover_rate",
+    "value": 25.5,
+    "prior_year_value": 28.8,
+    "unit": "%"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2024-2025",
+    "kpi": "gender_pay_gap",
+    "value": -0.008810961159019845,
+    "prior_year_value": null,
+    "unit": "fraction (M-F)/M"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2024-2025",
+    "kpi": "safety_incident_rate",
+    "value": 0.0,
+    "prior_year_value": null,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2025-2026",
+    "kpi": "ghg_intensity",
+    "value": 1.0,
+    "prior_year_value": 2.0,
+    "unit": "g CO2e/Rupee"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2025-2026",
+    "kpi": "water_intensity",
+    "value": 0.000133,
+    "prior_year_value": 0.000124,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2025-2026",
+    "kpi": "employee_turnover_rate",
+    "value": null,
+    "prior_year_value": null,
+    "unit": null
+  },
+  {
+    "company": "AXIS",
+    "fy": "2025-2026",
+    "kpi": "gender_pay_gap",
+    "value": -0.014515153551508635,
+    "prior_year_value": null,
+    "unit": "fraction (M-F)/M"
+  },
+  {
+    "company": "AXIS",
+    "fy": "2025-2026",
+    "kpi": "safety_incident_rate",
+    "value": 0.0,
+    "prior_year_value": 0.0,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2023-2024",
+    "kpi": "ghg_intensity",
+    "value": 1.0,
+    "prior_year_value": 2.0,
+    "unit": "g CO2e/Rupee"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2023-2024",
+    "kpi": "water_intensity",
+    "value": 2.78,
+    "prior_year_value": 2.95,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2023-2024",
+    "kpi": "employee_turnover_rate",
+    "value": 14.0,
+    "prior_year_value": 20.0,
+    "unit": "%"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2023-2024",
+    "kpi": "gender_pay_gap",
+    "value": 0.3104830862736758,
+    "prior_year_value": null,
+    "unit": "fraction (M-F)/M"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2023-2024",
+    "kpi": "safety_incident_rate",
+    "value": null,
+    "prior_year_value": null,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2024-2025",
+    "kpi": "ghg_intensity",
+    "value": null,
+    "prior_year_value": null,
+    "unit": null
+  },
+  {
+    "company": "HDFC",
+    "fy": "2024-2025",
+    "kpi": "water_intensity",
+    "value": 6.38,
+    "prior_year_value": 7.89,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2024-2025",
+    "kpi": "employee_turnover_rate",
+    "value": 12.0,
+    "prior_year_value": 14.0,
+    "unit": "%"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2024-2025",
+    "kpi": "gender_pay_gap",
+    "value": 0.25067667322834647,
+    "prior_year_value": null,
+    "unit": "fraction (M-F)/M"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2024-2025",
+    "kpi": "safety_incident_rate",
+    "value": 0.96,
+    "prior_year_value": 0.0,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2025-2026",
+    "kpi": "ghg_intensity",
+    "value": null,
+    "prior_year_value": null,
+    "unit": null
+  },
+  {
+    "company": "HDFC",
+    "fy": "2025-2026",
+    "kpi": "water_intensity",
+    "value": 1.2,
+    "prior_year_value": 1.28,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2025-2026",
+    "kpi": "employee_turnover_rate",
+    "value": 10.0,
+    "prior_year_value": 12.0,
+    "unit": "%"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2025-2026",
+    "kpi": "gender_pay_gap",
+    "value": 0.2092198223827346,
+    "prior_year_value": null,
+    "unit": "fraction (M-F)/M"
+  },
+  {
+    "company": "HDFC",
+    "fy": "2025-2026",
+    "kpi": "safety_incident_rate",
+    "value": 1.49,
+    "prior_year_value": 0.96,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2023-2024",
+    "kpi": "ghg_intensity",
+    "value": 1.0,
+    "prior_year_value": 2.0,
+    "unit": "g CO2e/Rupee"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2023-2024",
+    "kpi": "water_intensity",
+    "value": 7.18,
+    "prior_year_value": 2.09,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2023-2024",
+    "kpi": "employee_turnover_rate",
+    "value": 24.5,
+    "prior_year_value": 30.9,
+    "unit": "%"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2023-2024",
+    "kpi": "gender_pay_gap",
+    "value": 0.9380207485672888,
+    "prior_year_value": null,
+    "unit": "fraction (M-F)/M"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2023-2024",
+    "kpi": "safety_incident_rate",
+    "value": null,
+    "prior_year_value": null,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2024-2025",
+    "kpi": "ghg_intensity",
+    "value": 1.0,
+    "prior_year_value": 2.0,
+    "unit": "g CO2e/Rupee"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2024-2025",
+    "kpi": "water_intensity",
+    "value": 4.56,
+    "prior_year_value": 7.18,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2024-2025",
+    "kpi": "employee_turnover_rate",
+    "value": 18.0,
+    "prior_year_value": 24.5,
+    "unit": "%"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2024-2025",
+    "kpi": "gender_pay_gap",
+    "value": 0.09309005015618813,
+    "prior_year_value": null,
+    "unit": "fraction (M-F)/M"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2024-2025",
+    "kpi": "safety_incident_rate",
+    "value": 0.01,
+    "prior_year_value": null,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2025-2026",
+    "kpi": "ghg_intensity",
+    "value": 1.0,
+    "prior_year_value": 2.0,
+    "unit": "g CO2e/Rupee"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2025-2026",
+    "kpi": "water_intensity",
+    "value": 4.11,
+    "prior_year_value": 4.56,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2025-2026",
+    "kpi": "employee_turnover_rate",
+    "value": 15.6,
+    "prior_year_value": 18.0,
+    "unit": "%"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2025-2026",
+    "kpi": "gender_pay_gap",
+    "value": 0.0576299131121756,
+    "prior_year_value": null,
+    "unit": "fraction (M-F)/M"
+  },
+  {
+    "company": "ICICI",
+    "fy": "2025-2026",
+    "kpi": "safety_incident_rate",
+    "value": 0.01,
+    "prior_year_value": 0.01,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2023-2024",
+    "kpi": "ghg_intensity",
+    "value": 1.0,
+    "prior_year_value": 2.0,
+    "unit": "g CO2e/Rupee"
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2023-2024",
+    "kpi": "water_intensity",
+    "value": 3.04,
+    "prior_year_value": 2.97,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2023-2024",
+    "kpi": "employee_turnover_rate",
+    "value": 39.6,
+    "prior_year_value": 45.9,
+    "unit": "%"
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2023-2024",
+    "kpi": "gender_pay_gap",
+    "value": 0.9985032740879326,
+    "prior_year_value": null,
+    "unit": "fraction (M-F)/M"
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2023-2024",
+    "kpi": "safety_incident_rate",
+    "value": 0.0,
+    "prior_year_value": 0.0,
+    "unit": "per million person-hours"
+  }
+]
