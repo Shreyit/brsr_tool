@@ -143,28 +143,7 @@
     {
       "principle_no": 3,
       "title": "Businesses should respect and promote the well-being of all employees, including those in their value chains",
-      "essential_indicators": [
-        {
-          "no": "1",
-          "question": "\u0007Provide the processes for consultation between stakeholders and the Board on economic,",
-          "text": "\u0007Provide the processes for consultation between stakeholders and the Board on economic, \nenvironmental, and social topics or if consultation is delegated, how is feedback from such \nconsultations provided to the Board.\n\t\n\u0007The Bank has various Board committees that oversee the processes and mechanisms for engagement with key \nstakeholders. There are dedicated teams that engage with respective stakeholders like customers, investors and \nregulators on an ongoing basis, and provide feedback to the Board committees during quarterly meetings. There \nmay also be in-person meetings of these stakeholders with Board members. As part of the Corporate Social \nResponsibility initiatives, the Bank, through its philanthropic arm, ICICI Foundation for Inclusive Growth, engages \nwith institutions to understand critical requirements or interventions required to promote sustainable ecosystems. \nUpdates are regularly provided to the ESG & CSR Committee and the Board."
-        },
-        {
-          "no": "2",
-          "question": "\u0007Whether stakeholder consultation is used to support the identification and management of",
-          "text": "\u0007Whether stakeholder consultation is used to support the identification and management of \nenvironmental, and social topics (Yes / No). If so, provide details of instances as to how the inputs \nreceived from stakeholders on these topics were incorporated into policies and activities of the \nentity.\n\t\n\u0007Yes, the engagement by the Bank’s teams with stakeholders like employees, investors, borrowers, regulators, \nindustry bodies and communities provides relevant inputs on environment and social topics. These are factored into \nthe ESG initiatives undertaken by the Bank."
-        },
-        {
-          "no": "3",
-          "question": "\u0007Provide details of instances of engagement with, and actions taken to, address the concerns of",
-          "text": "\u0007Provide details of instances of engagement with, and actions taken to, address the concerns of \nvulnerable/ marginalized stakeholder groups.\n\t\n\u0007The Bank has an ongoing engagement with customers from vulnerable groups, particularly in the rural and business \nbanking segment, to meet their financial requirements. Further, as part of corporate social responsibility, several \nsocial initiatives are being undertaken across India. Please refer to the ESG Report of FY2026 for relevant case \nstudies."
-        },
-        {
-          "no": "1",
-          "question": "\u0007Employees and workers who have been provided training on human rights issues and policy(ies) of",
-          "text": "\u0007Employees and workers who have been provided training on human rights issues and policy(ies) of \nthe entity, in the following format:\nFY2026\nFY2025\nTotal (A)\nNo. of employees/\nworkers covered (B)\n% (B/A)\nTotal² (C)\nNo. of employees/\nworkers covered (D)\n% (D/C)\nEmployees\nPermanent\n124,029\n122,591\n98.84%\n129,177\n102,653\n79.47%\nOther than \npermanent¹\n295\n168\n56.95%\n1,780\n1,626\n91.35%\nTotal employees\n124,324\n122,759\n98.74%\n130,957\n104,279\n79.63%\nEssential Indicators\nLeadership Indicators"
-        }
-      ],
+      "essential_indicators": [],
       "leadership_indicators": [
         {
           "no": "4",
@@ -189,9 +168,15 @@
         {
           "no": "2",
           "question": "\u0007List stakeholder groups identified as key for your entity and the frequency of engagement with",
-          "text": "\u0007List stakeholder groups identified as key for your entity and the frequency of engagement with \neach stakeholder group.\nStakeholder \ngroup\nWhether identified \nas vulnerable & \nmarginalized group \n(Yes/No)\nChannels of \ncommunication\nFrequency of \nengagement \n(Annually/ Half yearly/ \nQuarterly / others – \nplease specify)\nPurpose and scope of \nengagement including \nkey topics and concerns \nraised during such \nengagement\nCustomers\nYes\nFor details, refer to the Social and Relationship Capital chapter of the \nIntegrated Report.\nShareholders/\ninvestors\nNo\nEmployees\nNo\nRegulators\nNo\nSociety\nYes\nNote: The Bank holds regular interactions to remain informed and responsive to their dynamic and evolving needs and to act in the \nbest interest of all stakeholders."
+          "text": "\u0007List stakeholder groups identified as key for your entity and the frequency of engagement with \neach stakeholder group.\nStakeholder \ngroup\nWhether identified \nas vulnerable & \nmarginalized group \n(Yes/No)\nChannels of \ncommunication\nFrequency of \nengagement \n(Annually/ Half yearly/ \nQuarterly / others – \nplease specify)\nPurpose and scope of \nengagement including \nkey topics and concerns \nraised during such \nengagement\nCustomers\nYes\nFor details, refer to the Social and Relationship Capital chapter of the \nIntegrated Report.\nShareholders/\ninvestors\nNo\nEmployees\nNo\nRegulators\nNo\nSociety\nYes\nNote: The Bank holds regular interactions to remain informed and responsive to their dynamic and evolving needs and to act in the \nbest interest of all stakeholders.\nEssential Indicators"
         }
       ]
+    },
+    {
+      "principle_no": 4,
+      "title": "Businesses should respect the interests of and be responsive to all its stakeholders",
+      "essential_indicators": [],
+      "leadership_indicators": []
     },
     {
       "principle_no": 5,
@@ -228,6 +213,68 @@
     {
       "principle_no": 6,
       "title": "Businesses should respect and make efforts to protect and restore the environment",
+      "essential_indicators": [],
+      "leadership_indicators": [
+        {
+          "no": "2",
+          "question": "Please provide details of total Scope 3 emissions and its intensity, in the following format:",
+          "text": "Please provide details of total Scope 3 emissions and its intensity, in the following format:\nParameter\nUnit\nFY20262\nFY20251\nTotal Scope 3 emissions \n(Break-up of the GHG into CO2, CH4, N2O, \nHFCs, PFCs, SF6, NF3, if available)\nMetric tonnes of CO2 \nequivalent\n144,861\n133,459\nTotal Scope 3 emissions per rupee of \nturnover\nMetric Tonne CO2 equivalent \nper ₹ crore of turnover\n0.72\n0.70\nTotal Scope 3 emission intensity \n(optional) – the relevant metric may be \nselected by the entity\nMetric Tonne CO2 equivalent \nper full time equivalent (FTE) \nemployee\n1.16\n1.02"
+        },
+        {
+          "no": "1",
+          "question": "\u0007Emissions for fiscal FY2025 includes capital goods, fuel-and-energy related activities, business travel, employee commuting,",
+          "text": "\u0007Emissions for fiscal FY2025 includes capital goods, fuel-and-energy related activities, business travel, employee commuting, \nupstream/downstream transportation & distribution and waste generated in operations (e-waste)."
+        },
+        {
+          "no": "2",
+          "question": "Emissions for fiscal FY2026 includes upstream leased assets in addition to the categories reported in FY2025",
+          "text": "Emissions for fiscal FY2026 includes upstream leased assets in addition to the categories reported in FY2025"
+        },
+        {
+          "no": "3",
+          "question": "Details on emission factors are available in the ESG Report for FY2025-26.",
+          "text": "Details on emission factors are available in the ESG Report for FY2025-26.\n\t\n\u0007Note: Indicate if any independent assessment/ evaluation/assurance has been carried out by an \nexternal agency? (Y/N) If yes, name of the external agency. \n\t\n\u0007No"
+        },
+        {
+          "no": "3",
+          "question": "\u0007With respect to the ecologically sensitive areas reported at Question 11 of Essential Indicators",
+          "text": "\u0007With respect to the ecologically sensitive areas reported at Question 11 of Essential Indicators \nabove, provide details of significant direct & indirect impact of the entity on biodiversity in such \nareas along-with prevention and remediation activities.\n\t\n\u0007Not applicable"
+        },
+        {
+          "no": "4",
+          "question": "\u0007If the entity has undertaken any specific initiatives or used innovative technology or solutions to",
+          "text": "\u0007If the entity has undertaken any specific initiatives or used innovative technology or solutions to \nimprove resource efficiency, or reduce impact due to emissions / effluent discharge / waste generated, \nplease provide details of the same as well as outcome of such initiatives, as per the following format:\nSr. \nno.\nInitiative undertaken\nDetails of the initiative \n(Web-link, if any, may \nbe provided along-\nwith summary)\nOutcome of the initiative\n1\nReplaced air conditioning (AC) units using R-22 \nhydrochlorofluorocarbon (HCFC) refrigerant gas \nwith eco-friendly 5-star-rated units using energy-\nefficient R-32 hydrofluorocarbon (HFC) gas\nRefer ESG Report for \nFY2025-26 available at \nhttps://www.icici.bank.\nin/about-us/annual\nReduce carbon footprint \n2\nImplemented rainwater harvesting at five offices \nwith potential to harvest 8,608 kilolitre per \nmonsoon season.\nReduce dependence on third \nparty water; Contribute to \ncircularity initiatives \n3\nFocused energy saving initiatives implemented at \n23 Large offices\nAchieved 3.4 million units of \nannualized energy savings \n4\nInstallation of Atmospheric Water Generators \n(AWG) at two locations with cumulative capacity \nof 750 litres per day\nReduce dependency on locally \nsourced packaged water for \ndrinking purposes \n5\nInstallation of IGBC approved Green-Pro certified \nproducts to make existing urinals waterless\nWater conservation \n6\nUsing FSC (Forest Stewardship Council) certified \nrecycled paper for pre-print forms at business \ncentres\nReduce carbon footprint; \nContribute to circularity \ninitiatives \n\nBUSINESS RESPONSIBILITY AND SUSTAINABILITY REPORT\n38 | Annual Report 2025-26"
+        },
+        {
+          "no": "5",
+          "question": "\u0007Does the entity have a business continuity and disaster management plan? Give details in 100",
+          "text": "\u0007Does the entity have a business continuity and disaster management plan? Give details in 100 \nwords/web link.\n\t\n\u0007The Bank has a defined Business Continuity Management (BCM) (including disaster management) plan to ensure \ncontinuity of critical services to customers and availability of critical systems during significant disruptions under \ndefined disaster scenarios. In the event of a disaster, the Bank endeavours to resume business and operations to an \nacceptable level as per the defined Recovery Time Objectives (RTO) detailed in the plan. The RTO provides guidance \nfor prioritizing activities, whenever necessary. There can be external factors beyond the Bank's control, which could \naffect the actual RTO. The BCM plans are reviewed and maintained to incorporate changes in the organization or \nenvironment and are subject to modification based on the reviews, situations, circumstances, etc. The efficacy of the \nBCM plan is established through periodic business continuity testing. The Bank also has a Disaster Recovery (DR) plan \nto ensure continuity of critical services to customers and availability of identified critical systems in the event of disaster \n(IT system disruption). The DR plans for the identified critical applications are reviewed and maintained to incorporate \nchanges in the application or environment and are subject to modification based on the reviews. The efficacy of the DR \nplan is established through periodic DR testing by way of DR drills as per published annual DR calendar."
+        },
+        {
+          "no": "6",
+          "question": "\u0007Disclose any significant adverse impact to the environment, arising from the value chain of the",
+          "text": "\u0007Disclose any significant adverse impact to the environment, arising from the value chain of the \nentity. What mitigation or adaptation measures have been taken by the entity in this regard?\n\t\n\u0007Not applicable"
+        },
+        {
+          "no": "7",
+          "question": "\u0007Percentage of value chain partners (by value of business done with such partners) that were",
+          "text": "\u0007Percentage of value chain partners (by value of business done with such partners) that were \nassessed for environmental impacts.\n\t\nNil"
+        },
+        {
+          "no": "8",
+          "question": "A.\t How many Green Credits have been generated or procured by the listed entity?",
+          "text": "A.\t How many Green Credits have been generated or procured by the listed entity?\n\t\n\t\nNil\n\t\nB. \t \u0007How many Green Credits have been generated or procured by the top ten (in terms of value of \npurchases and sales, respectively) value chain partners?\n\t\n\t\nNot tracked"
+        },
+        {
+          "no": "1",
+          "question": "a.",
+          "text": "a.\t\nNumber of affiliations with trade and industry chambers/associations.\n\t\n\t\nFour\n\t\nb.\t\n\u0007List the top 10 trade and industry chambers/ associations (determined based on the total \nmembers of such body) the entity is a member of/ affiliated to\nSr. \nno.\nName of the trade and industry chambers/ \nassociations\nReach of trade and industry chambers/ \nassociations (State/National)\n1\nConfederation of Indian Industry (CII)\nNational\n2\nIndian Banks' Association (IBA)\nNational\n3\nFederation of Indian Chambers of Commerce and Industry \n(FICCI)\nNational\n4\nInstitute of International Finance (IIF)\nInternational\nEssential Indicators"
+        }
+      ]
+    },
+    {
+      "principle_no": 7,
+      "title": "Businesses, when engaging in influencing public and regulatory policy, should do so in a manner that is responsible and transparent",
       "essential_indicators": [
         {
           "no": "3",

@@ -48,6 +48,7 @@ FILENAME_RE = re.compile(r"^([A-Za-z]+)_(\d{4}-\d{4})$")
 
 BUSINESSES_WINDOW = 100  # chars after "Principle N" to look for "Businesses"
 INDICATOR_ITEM_WINDOW = 500  # chars after a header candidate to find "1."
+FALLBACK_WINDOW = 15000  # chars after a fallback "Principle N" candidate to look for both indicator headers
 
 
 def find_indicator_headers(text):
@@ -91,7 +92,37 @@ def find_principle_headers(text):
         segment = text[pos:end]
         if find_indicator_headers(segment):
             real.append((pos, no))
+
+    found_nos = {no for _, no in real}
+    missing = set(range(1, 10)) - found_nos
+    if missing:
+        real.extend(find_principle_headers_fallback(text, missing))
+        real.sort(key=lambda item: item[0])
     return real
+
+
+def find_principle_headers_fallback(text, missing):
+    """Recovers principle numbers the primary heuristic missed entirely.
+
+    Some filings (e.g. a BRSR bundled into a much larger Integrated Annual
+    Report) skip the NGRBC "Businesses should..." statement right after the
+    "PRINCIPLE N" heading and jump straight into indicator content, so the
+    primary pass's "Businesses" check never fires for the real header.
+    Only called for principle numbers still missing after the primary pass,
+    so it can't regress filings that already extract cleanly. Requires BOTH
+    an essential and a leadership indicator header within FALLBACK_WINDOW
+    chars, to reject stray cross-references (e.g. annexure indicator-mapping
+    lists like "Principle 1: Essential Indicator 1, Leadership Indicator 1")."""
+    recovered = {}
+    for m in PRINCIPLE_CANDIDATE_RE.finditer(text):
+        no = int(m.group(1))
+        if no not in missing or no in recovered:
+            continue
+        window = text[m.end():m.end() + FALLBACK_WINDOW]
+        labels = {label for _, _, label in find_indicator_headers(window)}
+        if {"essential_indicators", "leadership_indicators"} <= labels:
+            recovered[no] = m.start()
+    return [(pos, no) for no, pos in recovered.items()]
 
 
 def parse_filename(pdf_path):

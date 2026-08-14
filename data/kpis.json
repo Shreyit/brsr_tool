@@ -3,9 +3,9 @@
     "company": "AXIS",
     "fy": "2023-2024",
     "kpi": "ghg_intensity",
-    "value": 1.0,
-    "prior_year_value": 2.0,
-    "unit": "g CO2e/ Rupee"
+    "value": 0.126,
+    "prior_year_value": 0.21,
+    "unit": "g CO"
   },
   {
     "company": "AXIS",
@@ -43,9 +43,9 @@
     "company": "AXIS",
     "fy": "2024-2025",
     "kpi": "ghg_intensity",
-    "value": 1.0,
-    "prior_year_value": 2.0,
-    "unit": "g CO2e/ Rupee"
+    "value": 0.097,
+    "prior_year_value": 0.126,
+    "unit": "g CO"
   },
   {
     "company": "AXIS",
@@ -83,9 +83,9 @@
     "company": "AXIS",
     "fy": "2025-2026",
     "kpi": "ghg_intensity",
-    "value": 1.0,
-    "prior_year_value": 2.0,
-    "unit": "g CO2e/Rupee"
+    "value": 0.105,
+    "prior_year_value": 0.097,
+    "unit": "g CO"
   },
   {
     "company": "AXIS",
@@ -123,9 +123,9 @@
     "company": "HDFC",
     "fy": "2023-2024",
     "kpi": "ghg_intensity",
-    "value": 1.0,
-    "prior_year_value": 2.0,
-    "unit": "g CO2e/Rupee"
+    "value": 1.2,
+    "prior_year_value": 1.21,
+    "unit": "tCO\u2082e/ INR in Cr."
   },
   {
     "company": "HDFC",
@@ -163,9 +163,9 @@
     "company": "HDFC",
     "fy": "2024-2025",
     "kpi": "ghg_intensity",
-    "value": null,
-    "prior_year_value": null,
-    "unit": null
+    "value": 0.99,
+    "prior_year_value": 1.2,
+    "unit": "tCO\u2082e/INR in Cr."
   },
   {
     "company": "HDFC",
@@ -203,9 +203,9 @@
     "company": "HDFC",
     "fy": "2025-2026",
     "kpi": "ghg_intensity",
-    "value": null,
-    "prior_year_value": null,
-    "unit": null
+    "value": 0.84,
+    "prior_year_value": 0.99,
+    "unit": "tCO\u2082e/\u20a8 in Cr."
   },
   {
     "company": "HDFC",
@@ -243,9 +243,9 @@
     "company": "ICICI",
     "fy": "2023-2024",
     "kpi": "ghg_intensity",
-    "value": 1.0,
-    "prior_year_value": 2.0,
-    "unit": "g CO2e/Rupee"
+    "value": 0.79,
+    "prior_year_value": 1.21,
+    "unit": "Metric tonnes of CO"
   },
   {
     "company": "ICICI",
@@ -283,9 +283,9 @@
     "company": "ICICI",
     "fy": "2024-2025",
     "kpi": "ghg_intensity",
-    "value": 1.0,
-    "prior_year_value": 2.0,
-    "unit": "g CO2e/Rupee"
+    "value": 0.76,
+    "prior_year_value": 0.79,
+    "unit": "Metric tonnes of CO"
   },
   {
     "company": "ICICI",
@@ -323,9 +323,9 @@
     "company": "ICICI",
     "fy": "2025-2026",
     "kpi": "ghg_intensity",
-    "value": 1.0,
-    "prior_year_value": 2.0,
-    "unit": "g CO2e/Rupee"
+    "value": 0.66,
+    "prior_year_value": 0.76,
+    "unit": "Metric Tonnes of CO"
   },
   {
     "company": "ICICI",
@@ -363,9 +363,9 @@
     "company": "KOTAK",
     "fy": "2023-2024",
     "kpi": "ghg_intensity",
-    "value": 1.0,
-    "prior_year_value": 2.0,
-    "unit": "g CO2e/Rupee"
+    "value": 1.68,
+    "prior_year_value": 1.97,
+    "unit": "Metric tonnes of CO"
   },
   {
     "company": "KOTAK",
@@ -397,6 +397,206 @@
     "kpi": "safety_incident_rate",
     "value": 0.0,
     "prior_year_value": 0.0,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2024-2025",
+    "kpi": "ghg_intensity",
+    "value": null,
+    "prior_year_value": null,
+    "unit": null
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2024-2025",
+    "kpi": "water_intensity",
+    "value": 1.78,
+    "prior_year_value": 3.04,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2024-2025",
+    "kpi": "employee_turnover_rate",
+    "value": null,
+    "prior_year_value": null,
+    "unit": null
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2024-2025",
+    "kpi": "gender_pay_gap",
+    "value": 0.2046589018302828,
+    "prior_year_value": null,
+    "unit": "fraction (M-F)/M"
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2024-2025",
+    "kpi": "safety_incident_rate",
+    "value": 0.02,
+    "prior_year_value": 0.0,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2025-2026",
+    "kpi": "ghg_intensity",
+    "value": 1.44,
+    "prior_year_value": 1.5,
+    "unit": "Metric tonnes of CO"
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2025-2026",
+    "kpi": "water_intensity",
+    "value": 2.73,
+    "prior_year_value": 1.78,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2025-2026",
+    "kpi": "employee_turnover_rate",
+    "value": null,
+    "prior_year_value": null,
+    "unit": null
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2025-2026",
+    "kpi": "gender_pay_gap",
+    "value": null,
+    "prior_year_value": null,
+    "unit": null
+  },
+  {
+    "company": "KOTAK",
+    "fy": "2025-2026",
+    "kpi": "safety_incident_rate",
+    "value": 0.01,
+    "prior_year_value": 0.02,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "PNB",
+    "fy": "2023-2024",
+    "kpi": "ghg_intensity",
+    "value": 1.71,
+    "prior_year_value": 2.23,
+    "unit": "-"
+  },
+  {
+    "company": "PNB",
+    "fy": "2023-2024",
+    "kpi": "water_intensity",
+    "value": 1.24,
+    "prior_year_value": 1.31,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "PNB",
+    "fy": "2023-2024",
+    "kpi": "employee_turnover_rate",
+    "value": 3.66,
+    "prior_year_value": 4.17,
+    "unit": "%"
+  },
+  {
+    "company": "PNB",
+    "fy": "2023-2024",
+    "kpi": "gender_pay_gap",
+    "value": null,
+    "prior_year_value": null,
+    "unit": null
+  },
+  {
+    "company": "PNB",
+    "fy": "2023-2024",
+    "kpi": "safety_incident_rate",
+    "value": 1.48,
+    "prior_year_value": 0.0,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "PNB",
+    "fy": "2024-2025",
+    "kpi": "ghg_intensity",
+    "value": 0.01,
+    "prior_year_value": 0.02,
+    "unit": "Metric tonnes of CO"
+  },
+  {
+    "company": "PNB",
+    "fy": "2024-2025",
+    "kpi": "water_intensity",
+    "value": 0.09,
+    "prior_year_value": 0.12,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "PNB",
+    "fy": "2024-2025",
+    "kpi": "employee_turnover_rate",
+    "value": 3.26,
+    "prior_year_value": 3.66,
+    "unit": "%"
+  },
+  {
+    "company": "PNB",
+    "fy": "2024-2025",
+    "kpi": "gender_pay_gap",
+    "value": null,
+    "prior_year_value": null,
+    "unit": null
+  },
+  {
+    "company": "PNB",
+    "fy": "2024-2025",
+    "kpi": "safety_incident_rate",
+    "value": 0.0,
+    "prior_year_value": 1.48,
+    "unit": "per million person-hours"
+  },
+  {
+    "company": "PNB",
+    "fy": "2025-2026",
+    "kpi": "ghg_intensity",
+    "value": 0.01,
+    "prior_year_value": 0.01,
+    "unit": "Metric tonnes of CO"
+  },
+  {
+    "company": "PNB",
+    "fy": "2025-2026",
+    "kpi": "water_intensity",
+    "value": 0.08,
+    "prior_year_value": 0.09,
+    "unit": "KL/INR crore"
+  },
+  {
+    "company": "PNB",
+    "fy": "2025-2026",
+    "kpi": "employee_turnover_rate",
+    "value": 4.15,
+    "prior_year_value": 3.26,
+    "unit": "%"
+  },
+  {
+    "company": "PNB",
+    "fy": "2025-2026",
+    "kpi": "gender_pay_gap",
+    "value": 0.09473993638118393,
+    "prior_year_value": null,
+    "unit": "fraction (M-F)/M"
+  },
+  {
+    "company": "PNB",
+    "fy": "2025-2026",
+    "kpi": "safety_incident_rate",
+    "value": null,
+    "prior_year_value": null,
     "unit": "per million person-hours"
   }
 ]

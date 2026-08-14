@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[2]
 EXTRACTED_DIR = ROOT / "data" / "extracted"
 OUT_PATH = ROOT / "data" / "kpis.json"
 
-NUM_RE = re.compile(r"-?\d[\d,]*\.?\d*")
+NUM_RE = re.compile(r"(?<![A-Za-z])-?\d[\d,]*\.?\d*")
 
 
 def _clean_num(s):
@@ -37,7 +37,7 @@ def _first_two_numbers(text, stop_before=None):
         idx = text.find(stop_before)
         if idx != -1:
             text = text[:idx]
-    tokens = re.findall(r"NIL|N\.?A\.?|Not Applicable|-?\d[\d,]*\.?\d*", text, re.IGNORECASE)
+    tokens = re.findall(r"NIL|N\.?A\.?|Not Applicable|(?<![A-Za-z])-?\d[\d,]*\.?\d*", text, re.IGNORECASE)
     vals = []
     for tok in tokens:
         if re.match(r"NIL|N\.?A\.?|Not Applicable", tok, re.IGNORECASE):
@@ -62,13 +62,25 @@ def _norm(text):
 
 def parse_ghg_intensity(text):
     text = _norm(text)
+    # Primary anchor (standard BRSR phrasing)
     m = re.search(r"Total Scope 1 and Scope 2 emission intensity per rupee of turnover", text, re.IGNORECASE)
+    # Fallback: HDFC uses "emissions per rupee" instead of "emission intensity per rupee"
+    if not m:
+        m = re.search(r"Total Scope 1 and Scope 2 emissions per rupee of turnover", text, re.IGNORECASE)
     if not m:
         return None, None, None
-    window = text[m.end():m.end() + 400]
+    window = text[m.end():m.end() + 600]
+    # The anchor is followed by a parenthetical restating the formula (containing
+    # "Scope 1" / "Scope 2" digits), then unit + actual numbers. Skip only the
+    # leading paren group(s) so we don't eat the real data further downstream.
+    paren_m = re.search(r"\(", window)
+    if paren_m and paren_m.start() < 60:
+        close_m = re.search(r"\)", window[paren_m.start():])
+        if close_m:
+            window = window[paren_m.start() + close_m.end():]
     cur, prior = _first_two_numbers(window, stop_before="adjusted for Purchasing Power Parity")
-    unit_m = re.search(r"g\s*CO2e\s*/\s*Rupee", window, re.IGNORECASE)
-    unit = unit_m.group(0) if unit_m else "g CO2e/Rupee"
+    unit_m = re.search(r"^\s*([^\d]+?)\s*(?=-?\d)", window)
+    unit = unit_m.group(1).strip() if unit_m else None
     return cur, prior, unit
 
 
@@ -100,6 +112,12 @@ def parse_turnover_rate(text):
 
 
 def parse_gender_pay_gap(text):
+    # prior_year_value is always None by design, not a bug: the BRSR
+    # "Median remuneration/salary/wages" table (Principle 5, Q3) reports a
+    # single point-in-time snapshot with no previous-FY column, unlike the
+    # GHG/water intensity tables. Checked across AXIS/ICICI/HDFC — none carry
+    # a second year here. The cross-year trend for this KPI instead comes
+    # from comparing `value` across separate report-years in data/kpis.json.
     text = _norm(text)
     for m in re.finditer(r"[Rr]emuneration/salary/wages", text):
         window = text[m.end():m.end() + 900]
