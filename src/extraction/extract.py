@@ -133,9 +133,9 @@ def parse_filename(pdf_path):
     return m.group(1).upper(), m.group(2)
 
 
-def extract_pages(pdf_path):
+def extract_pages(pdf_path, sort=False):
     doc = fitz.open(pdf_path)
-    pages = [page.get_text() for page in doc]
+    pages = [page.get_text(sort=sort) for page in doc]
     doc.close()
     return pages
 
@@ -170,6 +170,34 @@ def build_structure(pdf_path):
     company, fy = parse_filename(pdf_path)
 
     principle_headers = find_principle_headers(full_text)
+
+    # Some filings (dense multi-column layouts, or a BRSR bundled into a much
+    # larger Integrated Annual Report, e.g. KOTAK) come out of PyMuPDF's
+    # default reading order scrambled enough that indicator content lands far
+    # from its heading. page.get_text(sort=True) reorders text by position
+    # and recovers those, but it also *regresses* filings that already work
+    # under default order (observed on PNB/ICICI/HDFC), so it's only tried as
+    # a fallback when the default order finds fewer than all 9 principles,
+    # and only kept if it strictly finds more.
+    if len(principle_headers) < 9:
+        sorted_pages = extract_pages(pdf_path, sort=True)
+        sorted_text = "\n".join(sorted_pages)
+        sorted_headers = find_principle_headers(sorted_text)
+        if len(sorted_headers) > len(principle_headers):
+            pages, full_text, principle_headers = sorted_pages, sorted_text, sorted_headers
+
+    # Dedupe by principle number (keep the earliest position) in case both
+    # the primary and fallback heuristics validate two different spots for
+    # the same number.
+    seen = set()
+    deduped = []
+    for pos, no in sorted(principle_headers):
+        if no in seen:
+            continue
+        seen.add(no)
+        deduped.append((pos, no))
+    principle_headers = deduped
+
     assurance_match = ASSURANCE_RE.search(full_text)
 
     general_end = principle_headers[0][0] if principle_headers else len(full_text)

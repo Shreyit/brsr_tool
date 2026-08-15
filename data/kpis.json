@@ -27,9 +27,9 @@
     "company": "AXIS",
     "fy": "2023-2024",
     "kpi": "gender_pay_gap",
-    "value": null,
+    "value": 0.9980237154150198,
     "prior_year_value": null,
-    "unit": null
+    "unit": "fraction (M-F)/M"
   },
   {
     "company": "AXIS",
@@ -99,9 +99,9 @@
     "company": "AXIS",
     "fy": "2025-2026",
     "kpi": "employee_turnover_rate",
-    "value": null,
-    "prior_year_value": null,
-    "unit": null
+    "value": 22.36,
+    "prior_year_value": 25.5,
+    "unit": "%"
   },
   {
     "company": "AXIS",
@@ -155,8 +155,8 @@
     "company": "HDFC",
     "fy": "2023-2024",
     "kpi": "safety_incident_rate",
-    "value": null,
-    "prior_year_value": null,
+    "value": 0.0,
+    "prior_year_value": 0.0,
     "unit": "per million person-hours"
   },
   {
@@ -275,8 +275,8 @@
     "company": "ICICI",
     "fy": "2023-2024",
     "kpi": "safety_incident_rate",
-    "value": null,
-    "prior_year_value": null,
+    "value": 0.0,
+    "prior_year_value": 0.0,
     "unit": "per million person-hours"
   },
   {
@@ -316,16 +316,16 @@
     "fy": "2024-2025",
     "kpi": "safety_incident_rate",
     "value": 0.01,
-    "prior_year_value": null,
+    "prior_year_value": 0.0,
     "unit": "per million person-hours"
   },
   {
     "company": "ICICI",
     "fy": "2025-2026",
     "kpi": "ghg_intensity",
-    "value": 0.66,
-    "prior_year_value": 0.76,
-    "unit": "Metric Tonnes of CO"
+    "value": null,
+    "prior_year_value": null,
+    "unit": null
   },
   {
     "company": "ICICI",
@@ -419,15 +419,15 @@
     "company": "KOTAK",
     "fy": "2024-2025",
     "kpi": "employee_turnover_rate",
-    "value": null,
-    "prior_year_value": null,
-    "unit": null
+    "value": 33.3,
+    "prior_year_value": 39.6,
+    "unit": "%"
   },
   {
     "company": "KOTAK",
     "fy": "2024-2025",
     "kpi": "gender_pay_gap",
-    "value": 0.2046589018302828,
+    "value": 0.878786064886867,
     "prior_year_value": null,
     "unit": "fraction (M-F)/M"
   },
@@ -459,17 +459,17 @@
     "company": "KOTAK",
     "fy": "2025-2026",
     "kpi": "employee_turnover_rate",
-    "value": null,
-    "prior_year_value": null,
-    "unit": null
+    "value": 32.5,
+    "prior_year_value": 33.3,
+    "unit": "%"
   },
   {
     "company": "KOTAK",
     "fy": "2025-2026",
     "kpi": "gender_pay_gap",
-    "value": null,
+    "value": 0.8772790599067175,
     "prior_year_value": null,
-    "unit": null
+    "unit": "fraction (M-F)/M"
   },
   {
     "company": "KOTAK",
@@ -507,9 +507,9 @@
     "company": "PNB",
     "fy": "2023-2024",
     "kpi": "gender_pay_gap",
-    "value": null,
+    "value": 0.06839945684696408,
     "prior_year_value": null,
-    "unit": null
+    "unit": "fraction (M-F)/M"
   },
   {
     "company": "PNB",
@@ -547,9 +547,9 @@
     "company": "PNB",
     "fy": "2024-2025",
     "kpi": "gender_pay_gap",
-    "value": null,
+    "value": 0.06839946520106081,
     "prior_year_value": null,
-    "unit": null
+    "unit": "fraction (M-F)/M"
   },
   {
     "company": "PNB",

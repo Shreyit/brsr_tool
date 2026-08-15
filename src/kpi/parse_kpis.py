@@ -16,6 +16,8 @@ import json
 import re
 from pathlib import Path
 
+from src.extraction.extract import PDF_DIR, extract_pages
+
 ROOT = Path(__file__).resolve().parents[2]
 EXTRACTED_DIR = ROOT / "data" / "extracted"
 OUT_PATH = ROOT / "data" / "kpis.json"
@@ -32,7 +34,10 @@ def _clean_num(s):
 
 
 def _first_two_numbers(text, stop_before=None):
-    """First two numeric tokens in text, skipping NIL/NA-ish words (-> None)."""
+    """First two numeric tokens in text. "NIL" is a disclosed zero -> 0.0;
+    "NA"/"N.A."/"Not Applicable" is genuinely not reported -> None. Treating
+    them the same used to hide real zero-incident/zero-emission disclosures
+    as if they were missing data."""
     if stop_before:
         idx = text.find(stop_before)
         if idx != -1:
@@ -40,7 +45,9 @@ def _first_two_numbers(text, stop_before=None):
     tokens = re.findall(r"NIL|N\.?A\.?|Not Applicable|(?<![A-Za-z])-?\d[\d,]*\.?\d*", text, re.IGNORECASE)
     vals = []
     for tok in tokens:
-        if re.match(r"NIL|N\.?A\.?|Not Applicable", tok, re.IGNORECASE):
+        if re.match(r"NIL", tok, re.IGNORECASE):
+            vals.append(0.0)
+        elif re.match(r"N\.?A\.?|Not Applicable", tok, re.IGNORECASE):
             vals.append(None)
         else:
             v = _clean_num(tok)
@@ -62,11 +69,14 @@ def _norm(text):
 
 def parse_ghg_intensity(text):
     text = _norm(text)
-    # Primary anchor (standard BRSR phrasing)
-    m = re.search(r"Total Scope 1 and Scope 2 emission intensity per rupee of turnover", text, re.IGNORECASE)
+    # Primary anchor (standard BRSR phrasing). "intensity\s*\d{0,3}" tolerates
+    # a footnote-reference digit PyMuPDF glues onto the word (e.g. KOTAK's
+    # "emission intensity34 per rupee..." for footnote 34), which otherwise
+    # breaks the literal substring match entirely.
+    m = re.search(r"Total Scope 1 and Scope 2 emission intensity\s*\d{0,3}\s*per rupee of turnover", text, re.IGNORECASE)
     # Fallback: HDFC uses "emissions per rupee" instead of "emission intensity per rupee"
     if not m:
-        m = re.search(r"Total Scope 1 and Scope 2 emissions per rupee of turnover", text, re.IGNORECASE)
+        m = re.search(r"Total Scope 1 and Scope 2 emissions\s*\d{0,3}\s*per rupee of turnover", text, re.IGNORECASE)
     if not m:
         return None, None, None
     window = text[m.end():m.end() + 600]
@@ -100,7 +110,7 @@ def parse_turnover_rate(text):
     if not m:
         return None, None, None
     window = text[m.end():m.end() + 600]
-    row_m = re.search(r"Permanent\s+[Ee]mployees\S*", window)
+    row_m = re.search(r"Permanent\s+[Ee]mployees?\S*", window)
     if not row_m:
         return None, None, None
     tail = window[row_m.end():]
@@ -119,7 +129,9 @@ def parse_gender_pay_gap(text):
     # a second year here. The cross-year trend for this KPI instead comes
     # from comparing `value` across separate report-years in data/kpis.json.
     text = _norm(text)
-    for m in re.finditer(r"[Rr]emuneration/salary/wages", text):
+    # PNB renders this as "remuneration/ salary/ wages" (space after each
+    # slash); other companies as "remuneration/salary/wages" (no space).
+    for m in re.finditer(r"remuneration/\s*salary/\s*wages", text, re.IGNORECASE):
         window = text[m.end():m.end() + 900]
         row_m = re.search(r"Employees other than (?:BoD|BOD) and KMP\S*", window)
         if not row_m:
@@ -129,7 +141,10 @@ def parse_gender_pay_gap(text):
         # currency/unit words and footnote digits mixed in; grab the 4
         # numeric-looking tokens (ignore lone 1-digit footnote markers glued
         # onto a preceding number, e.g. "694,313 3" -> take 694313 not 3).
-        raw_tokens = re.findall(r"[\d,]+\.?\d*|₹\s*[\d.]+\s*(?:[Ll]akh|[Cc]r)", tail)
+        # lakh/cr is an optional trailing scale word with or without a
+        # leading ₹ (KOTAK writes bare "6.46 lakh", no rupee sign).
+        raw_tokens = re.findall(r"₹?\s*[\d,]+\.?\d*\s*(?:[Ll]akh|[Cc]r)?", tail)
+        raw_tokens = [t for t in raw_tokens if t.strip()]
         nums = []
         for tok in raw_tokens:
             v = _clean_num(tok.replace("₹", ""))
@@ -175,11 +190,39 @@ KPI_PARSERS = {
 }
 
 
+def _sorted_text_for(report_json):
+    """Lazily re-extract the source PDF with PyMuPDF's sort=True reading
+    order. Some filings (KOTAK, ICICI_2025-2026) interleave a table's unit
+    label and values *inside* an anchor phrase under the default extraction
+    order (e.g. "...per rupee of Metric tonnes of CO2 turnover..." instead
+    of "...per rupee of turnover..."), which breaks the anchor regex outright
+    even though the numbers are present on the page. sort=True reorders by
+    position and usually fixes it, at the cost of a second PDF parse -- only
+    called when the default text already came up empty for a KPI."""
+    source_file = report_json.get("source_file")
+    if not source_file:
+        return None
+    pdf_path = PDF_DIR / source_file
+    if not pdf_path.exists():
+        return None
+    return "\n".join(extract_pages(pdf_path, sort=True))
+
+
 def parse_report(report_json):
     text = report_json["full_text"]
     records = []
+    sorted_text = None
+    tried_sorted = False
     for kpi, fn in KPI_PARSERS.items():
         cur, prior, unit = fn(text)
+        if cur is None and prior is None:
+            if not tried_sorted:
+                sorted_text = _sorted_text_for(report_json)
+                tried_sorted = True
+            if sorted_text:
+                cur2, prior2, unit2 = fn(sorted_text)
+                if cur2 is not None or prior2 is not None:
+                    cur, prior, unit = cur2, prior2, unit2
         records.append(
             {
                 "company": report_json["company"],
